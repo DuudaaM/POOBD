@@ -1,6 +1,10 @@
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class Maquiagem {
 
+	@Id
 	private int id_Maquiagem;
 	private boolean Noiva;
 	private boolean Formanda;
@@ -37,5 +41,29 @@ public class Maquiagem {
 	public void setCasual(boolean casual) {
 		Casual = casual;
 	}
+	
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Maquiagem other = (Maquiagem) obj;
+		if (Casual != other.Casual)
+			return false;
+		if (Debutante != other.Debutante)
+			return false;
+		if (Formanda != other.Formanda)
+			return false;
+		if (Noiva != other.Noiva)
+			return false;
+		if (id_Maquiagem != other.id_Maquiagem)
+			return false;
+		return true;
+	}
+	
 
 }
