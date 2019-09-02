@@ -1,7 +1,11 @@
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+   @Entity
 public class Unha {
 
-	private int id_Unha;
+	 @Id
+	private Integer id_Unha;
 	private boolean Manicure;
 	private boolean Pedicure;
 	

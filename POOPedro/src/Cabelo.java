@@ -1,7 +1,11 @@
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+ @Entity
 public class Cabelo {
 
-	private int Id_Cabelo;
+	@Id
+	private Integer Id_Cabelo;
 	private String Penteados;
 	private boolean Quimica;
 	private String Corte;

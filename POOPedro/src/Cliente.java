@@ -1,7 +1,11 @@
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+  @Entity
 public class Cliente {
 
-	private int CPF;
+	@Id
+	private Integer CPF;
 	private String nome;
 	private String Endereco;
 	private int telefone;

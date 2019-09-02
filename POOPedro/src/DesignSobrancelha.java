@@ -1,8 +1,13 @@
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+  @Entity
 public class DesignSobrancelha {
 
-	private int id_Sobrancelha;
+	@Id
+	private Integer id_Sobrancelha;
 	private String Modelo;
+	
 	
 	public int getId_Sobrancelha() {
 		return id_Sobrancelha;

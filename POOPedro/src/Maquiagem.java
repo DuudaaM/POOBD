@@ -1,7 +1,11 @@
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class Maquiagem {
 
-	private int id_Maquiagem;
+	@Id
+	private Integer id_Maquiagem;
 	private boolean Noiva;
 	private boolean Formanda;
 	private boolean Debutante;
