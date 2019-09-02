@@ -5,17 +5,20 @@ import javax.persistence.Id;
 public class Maquiagem {
 
 	@Id
-	private Integer id_Maquiagem;
+
+	private Long Id;
 	private boolean Noiva;
 	private boolean Formanda;
 	private boolean Debutante;
 	private boolean Casual;
 	
-	public int getId_Maquiagem() {
-		return id_Maquiagem;
+	
+	
+	public Long getId() {
+		return Id;
 	}
-	public void setId_Maquiagem(int id_Maquiagem) {
-		this.id_Maquiagem = id_Maquiagem;
+	public void setId(Long id) {
+		Id = id;
 	}
 	public boolean isNoiva() {
 		return Noiva;
@@ -41,5 +44,7 @@ public class Maquiagem {
 	public void setCasual(boolean casual) {
 		Casual = casual;
 	}
-
+	
+	
+	
 }

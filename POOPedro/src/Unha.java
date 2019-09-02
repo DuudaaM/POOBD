@@ -1,19 +1,23 @@
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-   @Entity
+@Entity
+
 public class Unha {
 
+
 	 @Id
-	private Integer id_Unha;
+	private Long Id;
 	private boolean Manicure;
 	private boolean Pedicure;
 	
-	public int getId_Unha() {
-		return id_Unha;
+	
+	
+	public Long getId() {
+		return Id;
 	}
-	public void setId_Unha(int id_Unha) {
-		this.id_Unha = id_Unha;
+	public void setId(Long id) {
+		Id = id;
 	}
 	public boolean isManicure() {
 		return Manicure;
@@ -27,4 +31,5 @@ public class Unha {
 	public void setPedicure(boolean pedicure) {
 		Pedicure = pedicure;
 	}
+	
 }

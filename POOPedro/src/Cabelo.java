@@ -1,21 +1,23 @@
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
  @Entity
-public class Cabelo {
+public class Cabelo implements Identificavel{
 
-	@Id
-	private Integer Id_Cabelo;
+ 
+	 @javax.persistence.Id
+	private Long Id;
 	private String Penteados;
 	private boolean Quimica;
 	private String Corte;
 	
-	public int getId_Cabelo() {
-		return Id_Cabelo;
+	
+	public Long getId() {
+		return Id;
 	}
-	public void setId_Cabelo(int id_Cabelo) {
-		Id_Cabelo = id_Cabelo;
+	public void setId(Long id) {
+		Id = id;
 	}
+	
 	public String getPenteados() {
 		return Penteados;
 	}
@@ -35,5 +37,6 @@ public class Cabelo {
 		Corte = corte;
 	}
 	
-}
 
+
+}

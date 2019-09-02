@@ -1,16 +1,24 @@
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-  @Entity
+@Entity
 public class Cliente {
 
 	@Id
-	private Integer CPF;
+	private Long Id;
+	
+	private int CPF;
 	private String nome;
 	private String Endereco;
 	private int telefone;
 	private String Email;
 	
+	public Long getId() {
+		return Id;
+	}
+	public void setId(Long id) {
+		Id = id;
+	}
 	public int getCPF() {
 		return CPF;
 	}
@@ -40,6 +48,6 @@ public class Cliente {
 	}
 	public void setEmail(String email) {
 		Email = email;
-	}
-
-}
+	}}
+	
+	
