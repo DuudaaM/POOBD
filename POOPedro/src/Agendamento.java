@@ -5,7 +5,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Agendamento {
+
+public class Agendamento implements Identificavel  {
+	
 	@Id
 	private Long id;
 	private Date diasemana;
@@ -14,6 +16,13 @@ public class Agendamento {
 
 	@OneToMany
 	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 	
 	public Date getDiasemana() {
 		return diasemana;

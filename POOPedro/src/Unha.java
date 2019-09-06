@@ -3,7 +3,7 @@ import javax.persistence.Id;
 
 @Entity
 
-public class Unha {
+public class Unha implements Identificavel {
 
 
 	 @Id

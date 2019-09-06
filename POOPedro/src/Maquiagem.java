@@ -2,7 +2,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Maquiagem {
+public class Maquiagem implements Identificavel{
 
 	@Id
 

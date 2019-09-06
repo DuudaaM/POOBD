@@ -4,7 +4,7 @@ import javax.persistence.Id;
 
 @Entity
 
-public class DesignSobrancelha {
+public class DesignSobrancelha implements Identificavel{
 
 	@Id
 	private Long Id;
