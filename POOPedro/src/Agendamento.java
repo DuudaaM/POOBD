@@ -7,7 +7,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class Agendamento {
 	@Id
-	private int id;
+	private Long id;
 	private Date diasemana;
 	private int hora;
 	private String local;

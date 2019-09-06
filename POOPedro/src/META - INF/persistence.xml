@@ -10,7 +10,7 @@
 			<!--  Propriedades da conexão com o Banco de Dados -->
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.4.170:5432/Salao_Pedro" />
 			<property name="javax.persistence.jdbc.user" value="poobd" />
-			<property name="javax.persistence.jdbc.password" value="poobdl" />
+			<property name="javax.persistence.jdbc.password" value="poobd" />
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 
 			<!-- Propriedades específicas do Hibernate -->
