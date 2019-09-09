@@ -1,12 +1,17 @@
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 
 public class Unha implements Identificavel {
 
 
-	 @Id
+	@Id
+    @GeneratedValue(generator="unha_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="unha_seq", sequenceName="unha_sequencia")
 	private Long Id;
 	private boolean Manicure;
 	private boolean Pedicure;

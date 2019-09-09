@@ -1,10 +1,15 @@
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
  @Entity
 public class Cabelo implements Identificavel{
 
  
-	 @Id
+	@Id
+    @GeneratedValue(generator="cabelo_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="cabelo_seq", sequenceName= "cabelo_sequencia")
 	private Long Id;
 	private String Penteados;
 	private boolean Quimica;

@@ -1,14 +1,19 @@
 import java.sql.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 
 public class Agendamento implements Identificavel  {
 	
 	@Id
+    @GeneratedValue(generator="agendamento_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="agendamento_seq", sequenceName = "agendamento_sequencia")
 	private Long id;
 	private Date diasemana;
 	private int hora;

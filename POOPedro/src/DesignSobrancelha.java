@@ -1,5 +1,8 @@
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 
 @Entity
@@ -7,6 +10,8 @@ import javax.persistence.Id;
 public class DesignSobrancelha implements Identificavel{
 
 	@Id
+    @GeneratedValue(generator="DesignSobrancelha_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="DesignSobrancelha_seq", sequenceName="DesignSobrancelha_sequencia")
 	private Long Id;
 	private String Modelo;
 	

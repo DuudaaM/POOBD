@@ -1,11 +1,15 @@
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Maquiagem implements Identificavel{
 
 	@Id
-
+    @GeneratedValue(generator="maquiagem_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="maquiagem_seq", sequenceName="maquiagem_sequencia")
 	private Long Id;
 	private boolean Noiva;
 	private boolean Formanda;
