@@ -1,10 +1,10 @@
 import javax.persistence.Entity;
-
+import javax.persistence.Id;
  @Entity
 public class Cabelo implements Identificavel{
 
  
-	 @javax.persistence.Id
+	 @Id
 	private Long Id;
 	private String Penteados;
 	private boolean Quimica;
