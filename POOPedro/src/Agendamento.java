@@ -1,4 +1,5 @@
 import java.sql.Date;
+import java.util.Calendar;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,44 +16,22 @@ public class Agendamento implements Identificavel  {
     @GeneratedValue(generator="agendamento_seq", strategy=GenerationType.SEQUENCE)
 	@SequenceGenerator(name="agendamento_seq", sequenceName = "agendamento_sequencia")
 	private Long id;
-	private Date diasemana;
-	private int hora;
-	private String local;
-
+	private Calendar agendar;
 	@OneToMany
-	
+
 	public Long getId() {
 		return id;
 	}
-
 	public void setId(Long id) {
 		this.id = id;
 	}
+	public Calendar getAgendar() {
+		return agendar;
+	}
+	public void setAgendar(Calendar agendar) {
+		this.agendar = agendar;
+	}
 	
-	public Date getDiasemana() {
-		return diasemana;
-	}
-
-	public void setDiasemana(Date diasemana) {
-		this.diasemana = diasemana;
-	}
-
-	public int getHora() {
-		return hora;
-	}
-
-	public void setHora(int hora) {
-		this.hora = hora;
-	}
-
-	public String getLocal() {
-		return local;
-	}
-
-	public void setLocal(String local) {
-		this.local = local;
-	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -62,21 +41,20 @@ public class Agendamento implements Identificavel  {
 		if (getClass() != obj.getClass())
 			return false;
 		Agendamento other = (Agendamento) obj;
-		if (diasemana == null) {
-			if (other.diasemana != null)
+		if (agendar == null) {
+			if (other.agendar != null)
 				return false;
-		} else if (!diasemana.equals(other.diasemana))
+		} else if (!agendar.equals(other.agendar))
 			return false;
-		if (hora != other.hora)
-			return false;
-		if (id != other.id)
-			return false;
-		if (local == null) {
-			if (other.local != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!local.equals(other.local))
+		} else if (!id.equals(other.id))
 			return false;
 		return true;
 	}
+	
+	
+	
 
 }
